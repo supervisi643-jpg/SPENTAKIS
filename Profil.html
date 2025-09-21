@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karakteristik Satuan Pendidikan - SMP Negeri 3 Pakis</title>
+    
+    <!-- Menggunakan Tailwind CSS untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Menggunakan Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Style untuk table agar lebih rapi */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: 600;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-gray-800">Karakteristik Satuan Pendidikan</h1>
+            <p class="text-lg text-blue-600 font-semibold">SMP Negeri 3 Pakis, Kabupaten Magelang</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+
+        <!-- Seksi Profil Umum -->
+        <section id="profil" class="bg-white p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">Profil Umum</h2>
+            <p class="text-gray-700 leading-relaxed">
+                SMP Negeri 3 Pakis berlokasi di Jalan Kaponan – Pogalan Km. 2, Dusun Bongkotan, Desa Ketundan, Kecamatan Pakis. Resmi berdiri pada 11 Juli 2023, sekolah ini menjadi pilihan masyarakat dari berbagai desa di sekitarnya. Terletak di lereng Gunung Merbabu, sekolah memiliki lingkungan yang aman, nyaman, sejuk, dan kondusif untuk belajar. Potensi budaya lokal seperti gotong royong yang masih kental turut mendukung pembentukan nilai positif di sekolah.
+            </p>
+        </section>
+
+        <!-- Seksi Analisis SWOT -->
+        <section id="analisis" class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Analisis Kondisi Sekolah</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Kekuatan & Peluang -->
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-green-500">
+                        <h3 class="flex items-center text-xl font-semibold text-green-700 mb-3"><i class="fas fa-thumbs-up mr-3"></i>Kekuatan (Potensi)</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Lingkungan belajar yang nyaman, aman, dan sejuk.</li>
+                            <li>Sarana prasarana cukup memadai.</li>
+                            <li>Budaya gotong royong masyarakat sekitar yang kuat.</li>
+                            <li>Memiliki mitra untuk memfasilitasi studi lanjut siswa.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500">
+                        <h3 class="flex items-center text-xl font-semibold text-blue-700 mb-3"><i class="fas fa-lightbulb mr-3"></i>Peluang</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Potensi prestasi non-akademik (kesenian, olahraga).</li>
+                            <li>Dukungan finansial non-BOS dari masyarakat yang mapan.</li>
+                            <li>Jiwa sosial masyarakat tinggi untuk dikembangkan.</li>
+                            <li>Kemitraan yang luas menciptakan lingkungan berdaya saing.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Kelemahan & Tantangan -->
+                <div class="space-y-8">
+                     <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-yellow-500">
+                        <h3 class="flex items-center text-xl font-semibold text-yellow-700 mb-3"><i class="fas fa-exclamation-triangle mr-3"></i>Kelemahan</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Proporsi anggaran untuk mutu guru & tendik masih kurang.</li>
+                            <li>Kesejahteraan psikologis (wellbeing) guru masih perlu ditingkatkan.</li>
+                            <li>Terjadi penurunan pada kualitas pembelajaran dan iklim kebinekaan.</li>
+                            <li>Rasio guru dan siswa belum ideal.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-red-500">
+                        <h3 class="flex items-center text-xl font-semibold text-red-700 mb-3"><i class="fas fa-shield-alt mr-3"></i>Tantangan</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Penggunaan telepon pintar yang berlebihan oleh siswa.</li>
+                            <li>Kurangnya kesadaran orang tua dalam memotivasi anak belajar.</li>
+                            <li>Masih adanya pernikahan dini di lingkungan sekitar.</li>
+                            <li>Tidak adanya transportasi umum untuk mobilitas siswa.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seksi Budaya Sekolah -->
+        <section id="budaya" class="bg-white p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Budaya Sekolah yang Dikembangkan</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-blue-50 p-4 rounded-md">
+                    <h4 class="font-semibold text-blue-800"><i class="fas fa-concierge-bell mr-2"></i>Budaya Pelayanan Prima</h4>
+                    <p class="text-sm text-gray-600">Terbukti dengan raihan Terbaik 1 Anugerah Pelayanan Publik tingkat kabupaten.</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-md">
+                    <h4 class="font-semibold text-green-800"><i class="fas fa-hands-helping mr-2"></i>Budaya Sekolah Inklusif</h4>
+                    <p class="text-sm text-gray-600">Menghadirkan pembelajaran ramah disabilitas serta menjunjung tinggi toleransi.</p>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-md">
+                    <h4 class="font-semibold text-yellow-800"><i class="fas fa-trophy mr-2"></i>Budaya Prestasi</h4>
+                    <p class="text-sm text-gray-600">Mengembangkan bakat siswa di bidang olahraga (bola voli, pencak silat) dan seni.</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-md">
+                    <h4 class="font-semibold text-purple-800"><i class="fas fa-book-open mr-2"></i>Budaya Literasi & Numerasi</h4>
+                    <p class="text-sm text-gray-600">Capaian kompetensi minimum siswa di atas 95% untuk literasi dan numerasi.</p>
+                </div>
+                 <div class="bg-teal-50 p-4 rounded-md">
+                    <h4 class="font-semibold text-teal-800"><i class="fas fa-leaf mr-2"></i>Budaya Peduli Lingkungan</h4>
+                    <p class="text-sm text-gray-600">Meraih predikat Sekolah Adiwiyata tingkat kabupaten dan menuju tingkat provinsi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seksi Sumber Daya Manusia -->
+        <section id="sdm" class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Sumber Daya Manusia (SDM)</h2>
+
+            <!-- Data Peserta Didik -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Peserta Didik T.A 2025/2026</h3>
+                <div class="overflow-x-auto">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kelas</th>
+                                <th>Laki-laki</th>
+                                <th>Perempuan</th>
+                                <th>Jumlah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>VII</td>
+                                <td>68</td>
+                                <td>54</td>
+                                <td>122</td>
+                            </tr>
+                            <tr>
+                                <td>VIII</td>
+                                <td>76</td>
+                                <td>63</td>
+                                <td>139</td>
+                            </tr>
+                             <tr>
+                                <td>IX</td>
+                                <td>76</td>
+                                <td>57</td>
+                                <td>133</td>
+                            </tr>
+                             <tr class="font-bold bg-gray-200">
+                                <td>Jumlah</td>
+                                <td>220</td>
+                                <td>174</td>
+                                <td>394</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+             <!-- Data Pendidik -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Daftar Pendidik T.A 2025/2026</h3>
+                <div class="overflow-x-auto">
+                     <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Status</th>
+                                <th>Tupoksi / Mapel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>L. Pramudya Wardhana, S.Pd</td><td>PNS</td><td>Kepala Sekolah</td></tr>
+                            <tr><td>2</td><td>Dra. Ari Puntorini</td><td>PNS</td><td>P. Pancasila</td></tr>
+                            <tr><td>3</td><td>Arwiyati, S. Pd.</td><td>PNS</td><td>IPS, TIK</td></tr>
+                            <tr><td>4</td><td>Fitria Esti Wardani, S. Pd.</td><td>PPPK</td><td>BK</td></tr>
+                            <tr><td>5</td><td>Khotibul Umam, S. Pd. I.</td><td>PPPK</td><td>PA Islam, Seni Budaya</td></tr>
+                            <tr><td>6</td><td>Kristina Surati, S. Th.</td><td>PPPK</td><td>PA Kristen</td></tr>
+                            <tr><td>7</td><td>Malikatun, S. Pd. I.</td><td>PPPK</td><td>PA Islam</td></tr>
+                            <tr><td>8</td><td>Muhamad Arif Susanto, S. Pd.</td><td>Honor Daerah</td><td>B. Jawa</td></tr>
+                            <tr><td>9</td><td>Nurul Khotimah, S. Pd.</td><td>PNS</td><td>B. Indonesia</td></tr>
+                            <tr><td>10</td><td>Pilar Sidik Pratomo, S. Pd.</td><td>PNS</td><td>B. Jawa</td></tr>
+                            <tr><td>11</td><td>Rahayu Widiningsih, S. Si.</td><td>PNS</td><td>IPA</td></tr>
+                            <tr><td>12</td><td>Sri Astuti, S. Pd.</td><td>PPPK</td><td>Matematika</td></tr>
+                            <tr><td>13</td><td>Suharti, S. Pd.</td><td>PNS</td><td>IPS</td></tr>
+                            <tr><td>14</td><td>Supriyono, S. Pd.</td><td>PNS</td><td>IPA</td></tr>
+                            <tr><td>15</td><td>Susilo, S. Pd.</td><td>PPPK</td><td>B. Indonesia</td></tr>
+                            <tr><td>16</td><td>Sutarno, S. Pd.</td><td>PPPK</td><td>Matematika</td></tr>
+                            <tr><td>17</td><td>Sutiati, S. Pd.</td><td>PNS</td><td>IPS</td></tr>
+                            <tr><td>18</td><td>Avif Hudiyono, S.Pd</td><td>PNS</td><td>PJOK</td></tr>
+                            <tr><td>19</td><td>Tri Edi Haryono, S. Pd.</td><td>PNS</td><td>B. Inggris</td></tr>
+                            <tr><td>20</td><td>Wahyu Catur Wibowo, S. Pd.</td><td>PPPK</td><td>B. Inggris</td></tr>
+                            <tr><td>21</td><td>Yunanto, S. Or.</td><td>PPPK</td><td>PJOK</td></tr>
+                            <tr><td>22</td><td>Karsini, S.Pd</td><td>PPPK</td><td>Prakarya</td></tr>
+                            <tr><td>23</td><td>Esti Nugraeni, S.Pd</td><td>PPPK</td><td>IPA</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+             <!-- Data Tenaga Kependidikan -->
+            <div>
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Daftar Tenaga Kependidikan T.A 2025/2026</h3>
+                <div class="overflow-x-auto">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Status Pegawai</th>
+                                <th>Pendidikan</th>
+                                <th>Tupoksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Slamet Sulono</td><td>PNS</td><td>SMP</td><td>Operator Layanan Operasional</td></tr>
+                            <tr><td>2</td><td>Darwanto</td><td>Honor Daerah</td><td>SMA</td><td>Penjaga Sekolah</td></tr>
+                            <tr><td>3</td><td>Sudarmadi</td><td>Honor Daerah</td><td>SMA</td><td>Tenaga Administrasi</td></tr>
+                            <tr><td>4</td><td>Supri Taufik</td><td>Honor Sekolah</td><td>SMA</td><td>Pramubakti</td></tr>
+                            <tr><td>5</td><td>Riyana</td><td>Honor Sekolah</td><td>-</td><td>Tenaga Administrasi</td></tr>
+                            <tr><td>6</td><td>Wiwik Sundari</td><td>Honor Daerah</td><td>SMP</td><td>Tenaga Administrasi</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-8">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>&copy; 2025 SMP Negeri 3 Pakis. Analisis Karakteristik Satuan Pendidikan.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

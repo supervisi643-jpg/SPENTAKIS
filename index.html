@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB SPENTAKIS</title>
+    
+    <!-- Menggunakan Tailwind CSS untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Menggunakan Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom styling untuk font dan slider */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slider-item {
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .slider-item.active {
+            display: block;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header dan Navigasi -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="text-2xl text-blue-600">
+                    <i class="fas fa-school"></i>
+                </div>
+                <a href="#" class="text-xl font-bold text-gray-800">SMP Negeri 3 Pakis</a>
+            </div>
+            
+            <!-- Menu untuk Desktop -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#beranda" class="text-gray-600 hover:text-blue-600">Beranda</a>
+                <div class="relative dropdown">
+                    <button class="text-gray-600 hover:text-blue-600 focus:outline-none">Profil <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48">
+                        <a href="profil.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Karakteristik Sekolah</a>
+                        <a href="visi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Visi & Misi</a>
+                        <a href="organisasi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Pengorganisasian</a>
+                    </div>
+                </div>
+                 <div class="relative dropdown">
+                    <button class="text-gray-600 hover:text-blue-600 focus:outline-none">Kesiswaan <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-md mt-2 py-2 w-48">
+                        <a href="#osis" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">OSIS</a>
+                        <a href="#pramuka" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Pramuka</a>
+                        <a href="#ekstra" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Ekstrakurikuler</a>
+                        <a href="pembiasaan.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Kokurikuler</a>
+                    </div>
+                </div>
+                <a href="#info" class="text-gray-600 hover:text-blue-600">Info Terkini</a>
+                <a href="#kontak" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Kontak</a>
+            </div>
+
+            <!-- Tombol Menu Mobile -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menu untuk Mobile (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+            <a href="#beranda" class="block py-2 text-gray-600 hover:text-blue-600">Beranda</a>
+            <h3 class="font-semibold mt-2">Profil</h3>
+            <a href="profil.html" class="block py-2 pl-4 text-gray-600 hover:text-blue-600">Karakteristik Sekolah</a>
+            <a href="visi.html" class="block py-2 pl-4 text-gray-600 hover:text-blue-600">Visi & Misi</a>
+            <a href="organisasi.html" class="block py-2 pl-4 text-gray-600 hover:text-blue-600">Pengorganisasian</a>
+             <h3 class="font-semibold mt-2">Kesiswaan</h3>
+            <a href="#osis" class="block py-2 pl-4 text-gray-600 hover:text-blue-600">OSIS</a>
+            <a href="#pramuka" class="block py-2 pl-4 text-gray-600 hover:text-blue-600">Pramuka</a>
+            <a href="#ekstra" class="block py-2 pl-4 text-gray-600 hover:text-blue-600">Ekstrakurikuler</a>
+            <a href="pembiasaan.html" class="block py-2 pl-4 text-gray-600 hover:text-blue-600">Kokurikuler</a>
+            <a href="#info" class="block py-2 text-gray-600 hover:text-blue-600">Info Terkini</a>
+            <a href="#kontak" class="block mt-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-center">Kontak</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bagian Slide Gambar (Hero Section) -->
+        <section id="beranda" class="relative h-[60vh] md:h-[80vh] w-full overflow-hidden">
+            <div id="slider" class="relative h-full">
+                <!-- Gambar 1 -->
+                <div class="slider-item active h-full">
+                    <img src="guru.png" alt="Kegiatan Belajar" class="w-full h-full object-cover">
+                </div>
+                <!-- Gambar 2 -->
+                <div class="slider-item h-full">
+                    <img src="jalan.png" alt="Prestasi Siswa" class="w-full h-full object-cover">
+                </div>
+                <!-- Gambar 3 -->
+                <div class="slider-item h-full">
+                    <img src="ipa1.png" alt="Fasilitas Sekolah" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <!-- Teks di atas gambar -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight">Selamat Datang di Website Resmi</h1>
+                <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold text-blue-300 mt-2">SMP NEGERI 3 PAKIS</h2>
+                <p class="mt-4 max-w-2xl text-lg md:text-xl">Mencetak Generasi BELIA BERPELITA.</p>
+                <a href="#info" class="mt-8 bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">Lihat Info Terbaru</a>
+            </div>
+        </section>
+
+        <!-- Bagian Visi & Misi -->
+        <section id="visimisi" class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800">Visi  Sekolah</h2>
+                    <p class="text-green-600 mt-2">Landasan dan arah tujuan pendidikan di sekolah kami.</p>
+                </div>
+				
+				<div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-blue-800">"Menjadi sekolah yang menghasilkan lulusan BELIA BERPELITA <br>(Berakhlak Mulia, Berdaya Saing, Peduli Lingkungan, dan Cinta Budaya)."</h2>                   
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Info Terkini -->
+        <section id="info" class="py-16">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800">Info Terkini</h2>
+                    <p class="text-green-600 mt-2">Berita, pengumuman, dan kegiatan terbaru dari sekolah kami.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Kartu Info 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/3498db/ffffff?text=Agenda+Kegiatan" alt="Prestasi" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full">Lomba</span>
+                            <h3 class="font-bold text-xl my-2 text-gray-800">Giat Pramuka</h3>
+                            <p class="text-gray-600 text-sm">Penggalang Putri Gudep 070 akan mengikuti lomba Giat Pramuka di tingkat Kabupaten</p>
+                            <a href="#" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Kartu Info 2 -->
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/e67e22/ffffff?text=Serba-Serbi" alt="PPDB" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                             <span class="text-sm text-orange-600 font-semibold bg-orange-100 px-3 py-1 rounded-full">Pengumuman</span>                            
+							<h3 class="text-gray-600 text-sm">1. Makan Bergizi Gratis
+							  <a href="mbg.html" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Baca Selengkapnya &rarr;</a></h3>
+                             <h3 class="text-gray-600 text-sm">2. Imunisasi HPV 
+                            <a href="HPV.html" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Baca Selengkapnya &rarr;</a></h3>
+                        </div>
+                    </div>
+                    <!-- Kartu Info 3 -->
+                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/9b59b6/ffffff?text=Kegiatan+Sekolah" alt="Kegiatan" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-purple-600 font-semibold bg-purple-100 px-3 py-1 rounded-full">ASBTS</span>
+                            <h3 class="font-bold text-xl my-2 text-gray-800">Asesmen Sumatif Bersama Tengah Semester Gasal</h3>
+                             <p class="text-gray-600 text-sm">ASBTS Gasal akan dimulai tanggal 22 September 2025</p>
+                            <a href="ASBTS.html" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Kalender Pendidikan -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800">Kalender Pendidikan</h2>
+                    <p class="text-gray-600 mt-2">Jadwal penting kegiatan akademik selama satu tahun ajaran.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                   <!-- Di sini Anda bisa menyematkan Google Calendar, atau menampilkan gambar kalender -->
+                   <p class="text-center text-gray-700 font-semibold mb-4">Tahun Ajaran 2025/2026</p>
+                   <div class="overflow-x-auto">
+                        <img src="jadwal asbts.png" alt="Kalender Pendidikan" class="rounded-md w-full">
+                   </div>
+                   <div class="text-center mt-6">
+                       <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
+                        <i class="fas fa-download mr-2"></i>Unduh Kalender (PDF)
+                       </a>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Kolom 1: Tentang Sekolah -->
+                <div>
+                    <h3 class="font-bold text-xl mb-4">SMPN 3 Pakis</h3>
+                    <p class="text-gray-400">Jl. Kaponan-Pogalan km2. Ketundan, Pakis, Magelang (56194)</p>
+                    <p class="text-gray-400 mt-2">Telepon: (021) 123-4567</p>
+                    <p class="text-gray-400 mt-2">Email: smpn3pakismagelangkab.sch.id</p>
+                </div>
+                <!-- Kolom 2: Tautan Cepat -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#visimisi" class="text-gray-400 hover:text-white">Visi & Misi</a></li>
+                        <li><a href="#info" class="text-gray-400 hover:text-white">Berita Sekolah</a></li>
+                        <li><a href="#ekstra" class="text-gray-400 hover:text-white">Ekstrakurikuler</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pendaftaran Siswa Baru</a></li>
+                    </ul>
+                </div>
+                <!-- Kolom 3: Media Sosial -->
+                 <div>
+                    <h3 class="font-bold text-lg mb-4">Ikuti Kami</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 SMPN 3 Pakis. Semua Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Script untuk Slider Gambar ---
+        const sliderItems = document.querySelectorAll('.slider-item');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            sliderItems.forEach((item, i) => {
+                item.classList.remove('active');
+                item.style.opacity = '0';
+                if (i === index) {
+                    item.classList.add('active');
+                    setTimeout(() => item.style.opacity = '1', 50);
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % sliderItems.length;
+            showSlide(currentSlide);
+        }
+
+        // Ganti gambar setiap 5 detik
+        setInterval(nextSlide, 5000);
+
+        // --- Script untuk Menu Mobile ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+    </script>
+</body>
+</html>

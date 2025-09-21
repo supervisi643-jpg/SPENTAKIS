@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imunisasi HPV</title>
+    
+    <!-- Menggunakan Tailwind CSS untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Menggunakan Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+/* Basic reset and body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for each slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Style for the slides container */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Style for individual slides */
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style for navigation buttons */
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-gray-800">Imunisasi HPV</h1>
+            <p class="text-lg text-blue-600 font-semibold">SMP Negeri 3 Pakis, Kabupaten Magelang</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+
+        <!-- Seksi Pendekatan Pembelajaran -->
+        <section id="pendekatan" class="bg-white p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2 flex items-center">
+			<i class="fas fa-microscope mr-3 text-blue-500"></i>vaksin untuk mencegah infeksi Human Papillomavirus (HPV)</h2>
+            
+            
+        </section>
+
+       
+
+        <!-- Seksi Muatan Lokal & P5 -->
+        <div class="grid lg:grid-cols-2 gap-8 mb-8">
+            <!-- Muatan Lokal -->
+            <section id="mulok" class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2 flex items-center">
+				<i class="fas fa-book-open mr-3 text-yellow-500"></i>Yuk! Pahami Apa HPV (Human Papillomavirus)</h2>
+                <p class="text-gray-700 mb-2"></p>
+                <div class="flex items-center bg-yellow-50 p-4 rounded-md">
+                    <img src="poster_hpv.png" alt="Image 4">
+                    <div style="text-align: justify">
+                      
+                    </div>
+                </div>
+            </section>
+			
+			<section id="mulok" class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2 flex items-center">
+				<i class="fas fa-book-open mr-3 text-yellow-500"></i>Info Grafis</h2>
+                <p class="text-gray-700 mb-2"></p>
+                <div class="flex items-center bg-yellow-50 p-4 rounded-md">
+                   <img src="tabel_hpv.png" alt="Image 4">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Seksi Struktur Kurikulum -->
+        <section id="struktur" class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Foto Kegiatan</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Intrakurikuler -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="mx-auto bg-green-100 text-green-600 text-3xl w-20 h-20 flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Panitia</h3>
+					 <!-- Slider 1 -->
+					<div class="slider">
+						<div class="slides">
+							<img src="1.png" alt="Image 1">
+							<img src="2.png" alt="Image 2">
+							<img src="3.png" alt="Image 3">
+						</div>
+						<button class="prev" onclick="moveSlide(-1, 0)">❮</button>
+						<button class="next" onclick="moveSlide(1, 0)">❯</button>
+					</div>                   
+                </div>
+                <!-- Kokurikuler -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="mx-auto bg-blue-100 text-blue-600 text-3xl w-20 h-20 flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Peserta</h3>
+                    <!-- Slider 2 -->
+					<div class="slider">
+						<div class="slides">
+							<img src="4.png" alt="Image 4">
+							<img src="5.png" alt="Image 5">
+							<img src="6.png" alt="Image 6">
+						</div>
+						<button class="prev" onclick="moveSlide(-1, 1)">❮</button>
+						<button class="next" onclick="moveSlide(1, 1)">❯</button>
+					</div>
+                </div>
+                <!-- Ekstrakurikuler -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="mx-auto bg-purple-100 text-purple-600 text-3xl w-20 h-20 flex items-center justify-center rounded-full mb-4">
+                        <i class="fas fa-basketball-ball"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Saat Belajar</h3>
+                    <div class="slider">
+						<div class="slides">
+						<img src="1.png" alt="Gambar 1">
+						<img src="7.png" alt="Gambar 2">
+						<img src="8.png" alt="Gambar 2">
+						</div>
+						<button class="prev" onclick="moveSlide(-1, 2)">❮</button>
+						<button class="next" onclick="moveSlide(1, 2)">❯</button>
+					</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seksi Bimbingan dan Konseling -->
+        <section id="bk" class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2 flex items-center">
+			<i class="fas fa-hands-helping mr-3 text-purple-500"></i>RENCANA KEGIATAN</h2>
+            <p class="text-gray-700 mb-6">Pahami agendanya jangan sampai ketinggalan</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-purple-800 text-lg">Pelaksanaan Imunisasi HPV</h4>
+                    <p class="text-sm text-gray-600">Senin, 22 September Pukul 10.00 WIB sampai selesai</p>
+                </div>
+                <div class="bg-teal-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-teal-800 text-lg">Sasaran</h4>
+                    <p class="text-sm text-gray-600">Murid Perempuan kelas IX</p>
+                </div>
+                <div class="bg-orange-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-orange-800 text-lg">Tempat</h4>
+                    <p class="text-sm text-gray-600">Laboratorium IPA SMPN 3 Pakis</p>
+                </div>
+                 <div class="bg-indigo-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-indigo-800 text-lg">Petugas</h4>
+                    <p class="text-sm text-gray-600">Puskesmas Pakis</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-8">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>&copy; 2025 SMP Negeri 3 Pakis. Imunisasi HPV</p>
+        </div>
+    </footer>
+
+</body>
+<script>
+function moveSlide(direction, sliderIndex) {
+    const slides = document.querySelectorAll('.slider')[sliderIndex].querySelector('.slides');
+    const totalSlides = slides.children.length;
+    const currentTransform = getComputedStyle(slides).transform;
+    const currentIndex = currentTransform === 'none' ? 0 : Math.abs(parseInt(currentTransform.split(',')[4])) / slides.offsetWidth;
+
+    let newIndex = currentIndex + direction;
+    if (newIndex >= totalSlides) {
+        newIndex = 0;
+    } else if (newIndex < 0) {
+        newIndex = totalSlides - 1;
+    }
+
+    slides.style.transform = `translateX(-${newIndex * 100}%)`;
+}
+</script>
+</html>
